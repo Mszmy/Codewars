@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Binary Addition</title>
+ 	<script type="text/javascript">
+ 		/*
+ 		Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.（即,将两数相加，然后二进制形式返回和）
+ 		*/
+ 		function addBinary(a,b) {
+ 			var sum = a + b;
+ 			// 将十进制转换成二进制
+ 			return sum.toString(2);
+		}
+ 		
+		// 验证
+		console.log(addBinary(1,2));//11
+		console.log(addBinary(0,1));//1
+	</script>
+</head>
+<body>
+</body>	
+</html>
