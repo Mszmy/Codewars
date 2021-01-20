@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Build Tower</title>
+ 	<script type="text/javascript">
+ 		function towerBuilder(nFloors) {
+ 			// console.log(nFloors);
+ 			/*
+ 			*  *数=2\*i+1
+			* 前空格数=nFloors -i -1
+			* 后空格数=nFloors -i -1
+ 			*/
+ 			var result = [];
+ 			for(var i=0;i<nFloors;i++){
+ 				result.push(" ".repeat(nFloors-i-1) 
+ 							+ "*".repeat(2*i+1) 
+ 							+ " ".repeat(nFloors-i-1));
+ 				console.log(result);
+ 			}
+ 			return result;
+		}
+		 		
+		// 验证
+		console.log(towerBuilder(1));//['*']
+		console.log(towerBuilder(3));//["  *  "," *** ","*****"]
+	</script>
+</head>
+<body>
+</body>	
+</html>
