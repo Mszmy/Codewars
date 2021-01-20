@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Capitalize Each Word</title>
+ 	<script type="text/javascript">
+ 		String.prototype.toJadenCase = function () {
+ 			/*
+ 			先全部转为小写，然后将首字母转换成大写
+ 			*/
+		 	var arr = this.toLowerCase().split(" ");
+		 	console.log(arr);
+			//遍历字符数组
+			for(var i = 0;i < arr.length;i++){
+			    //把第一个字符变为大写
+			    arr[i] = arr[i][0].toUpperCase() + arr[i].substring(1,arr[i].length);
+			}
+			//加上空格，返回原模式的字符串
+			return arr.join(" ");
+		};
+		 		
+		// 验证
+		var str = "How can mirrors be real if our eyes aren't real";
+		console.log(str.toJadenCase());//"How Can Mirrors Be Real If Our Eyes Aren't Real"
+</script>
+</head>
+<body>
+</body>	
+</html>
