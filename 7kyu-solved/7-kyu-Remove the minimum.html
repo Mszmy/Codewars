@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Remove the minimum</title>
+ 	<script type="text/javascript">
+ 		function removeSmallest(numbers) {
+ 			/*
+ 			*  先检查数组长度是否为0，如果为空数组，则返回空数组；
+ 			*  否则寻找数组中的最小元素；
+ 			*如果只有一个直接删除；如果有多个，则找到下标最低的元素删除。
+ 			*/
+ 			// 获取到传入数组的长度
+			var length = numbers.length;
+			// console.log(length);
+
+			// 如果长度为0则返回空数组，否则寻找数组中最小元素
+			if(length!=0){
+				// 寻找数组中的最小元素
+				var min = Math.min(...numbers);
+				// console.log(min);
+
+				// 获取到最小元素的index数组
+				var index = [];
+				for(var i=0;i<length;i++){
+					if(min == numbers[i]){
+						index.push(i);
+					}
+				}
+				// 获取到最小元素的最小index，并删除
+				var indexMin = Math.min(...index);
+				// console.log('indexMin'+indexMin);
+				numbers.splice(indexMin,1);
+				// console.log('numbers'+numbers);
+				return numbers;
+			}else{
+				return [];
+			}
+		}
+		 		
+		// 验证
+		console.log(removeSmallest([1,2,3,4,5]));//[2,3,4,5]
+		console.log(removeSmallest([2,2,1,2,1]) );//[2,2,2,1]
+	</script>
+</head>
+<body>
+</body>	
+</html>
