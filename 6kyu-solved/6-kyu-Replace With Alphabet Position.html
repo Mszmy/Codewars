@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Replace With Alphabet Position</title>
+ 	<script type="text/javascript">
+ 		function alphabetPosition(text) {
+ 			// 将文本全部转为大写
+ 			var str = text.toUpperCase();
+
+ 			// 利用正则表达式将不是[A-Z]的内容替换成掉
+ 			str = str.replace(/[^A-Z]/g,'');
+
+ 			// 按照空格分隔放到arr数组中
+ 			var arr = str.split('');
+
+ 			// 匹配到unicode编码，并用join连接返回
+ 			// charCodeAt()返回指定位置的unicode编码
+ 			arr = arr.map((c) => c.charCodeAt()-64).join(' ');
+ 			// console.log(arr);
+		  	return arr;
+		}
+		 		
+		// 验证
+		console.log(alphabetPosition("The sunset sets at twelve o' clock."));//"20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+	</script>
+</head>
+<body>
+</body>	
+</html>
