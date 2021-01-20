@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Find the unique number</title>
+ 	<script type="text/javascript">
+ 		/*
+ 		There is an array with some numbers. All numbers are equal except for one.
+ 		*/
+ 		function findUniq(arr) {
+		  for(var i=0;i<arr.length;i++){
+		  	for(var j=i;j<arr.length;j++){
+		  		if(arr[i] != arr[j]){
+		  			return arr[j];
+		  		}
+		  	}
+		  }
+		}
+		 		
+		// 验证
+		console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));//2
+		console.log(findUniq([ 0, 0, 0.55, 0, 0 ]));//0.55
+	</script>
+</head>
+<body>
+</body>	
+</html>
