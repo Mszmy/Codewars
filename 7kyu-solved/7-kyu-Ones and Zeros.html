@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Ones and Zeros</title>
+ 	<script type="text/javascript">
+ 		/*
+ 		Given an array of ones and zeroes, convert the equivalent binary value to an integer.（即 将二进制转换成十进制)
+ 		*/
+ 		const binaryArrayToNumber = arr => {
+ 			// 转换成number
+ 			var number = arr.join('');
+ 			// console.log(number);
+ 			// 将二进制转换成十进制
+ 			var result = parseInt(number,2);
+		  	return result;
+		};
+		 		
+		// 验证
+		console.log(binaryArrayToNumber([0,0,0,1]));//1
+		console.log(binaryArrayToNumber([1,1,1,1]));//15
+	</script>
+</head>
+<body>
+</body>	
+</html>
