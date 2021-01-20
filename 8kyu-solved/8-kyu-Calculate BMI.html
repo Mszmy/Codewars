@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Calculate BMI</title>
+ 	<script type="text/javascript">
+ 		function bmi(weight, height) {
+			console.log(weight,height);
+			var h = height*100;
+			var bmi = (weight/(Math.pow(h,2)))*10000;
+			// console.log(bmi);
+			if(bmi <=18.5){
+				return "Underweight";
+			}else if(bmi>18.5 &&bmi<=25.0){
+				return "Normal";
+			}else if(bmi>25.0 &&bmi<=30.0){
+				return "Overweight";
+			}else{
+				return "";
+			}
+		}
+ 		
+		// 验证
+		console.log(bmi(80, 1.80));//Normal
+	</script>
+</head>
+<body>
+</body>	
+</html>
