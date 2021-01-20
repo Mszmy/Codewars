@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Determine the same element</title>
+ 	<script type="text/javascript">
+ 		/*
+ 		Given two arrays `a` and `b` write a function `comp(a, b)` (`compSame(a, b)` in Clojure) that checks whether the two arrays have the "same" elements, with the same multiplicities. "Same" means, here, that the elements in `b` are the elements in `a` squared, regardless of the order.
+ 		*/
+ 		function comp(array1, array2){
+ 			/*
+ 			- 先将数组中的元素进行平方，放入到新的数组中
+ 			- **newArr.sort().toString() == array2.sort().toString()**用来判断两数组的元素是否全部相同
+ 			*/
+ 			var newArr = [];
+ 			for(var i=0;i<array1.length;i++){
+ 				newArr.push(Math.pow(array1[i],2));
+ 			}
+ 			// 判断两个数组的元素是否全部相同
+ 			return (newArr.sort().toString() == array2.sort().toString());
+		}
+		 		
+		// 验证
+		a1 = [121, 144, 19, 161, 19, 144, 19, 11];
+		a2 = [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19];
+		console.log(comp(a1,a2));//true
+	</script>
+</head>
+<body>
+</body>	
+</html>
