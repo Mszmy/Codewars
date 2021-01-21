@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Aspect Ratio Cropping - Part 1</title>
+ 	<script type="text/javascript">
+  /*
+  Write a function that accepts arbitrary X and Y resolutions and converts them into resolutions with a 16:9 aspect ratio that maintain equal height. Round your answers up to the nearest integer.
+  */
+ 		function aspectRatio(x,y){
+ 			var width = Math.ceil(y*16/9);
+ 			var result = [width,y];
+ 			// console.log(result);
+ 			return result;
+		}
+ 		
+		// 验证
+		console.log(aspectRatio(640, 480));//[854,480]
+		console.log(aspectRatio(960,720));//[1280,720]
+	</script>
+</head>
+<body>
+</body>	
+</html>
