@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Sum of differences in array</title>
+ 	<script type="text/javascript">
+  /*
+  Your task is to sum the differences between consecutive pairs in the array in descending order.
+  */
+ 		function sumOfDifferences(arr) {
+ 			// 先将数组降序排序
+ 			arr = arr.sort(function(a,b){return b-a;});
+ 			var arr1 = [];
+ 			var result = 0;
+ 			for(var i=0;i<arr.length-1;i++){
+ 				var sum = arr[i] - arr[i+1];
+ 				arr1.push(sum);
+ 			}
+ 			for(var j=0;j<arr1.length;j++){
+ 				var result = result + arr1[j];
+ 			}
+ 			return result;
+ 		}
+ 		
+		// 验证
+		console.log(sumOfDifferences([-3, -2, -1])); // 2
+		console.log(sumOfDifferences([1, 2, 10])); // 9
+	</script>
+</head>
+<body>
+</body>	
+</html>
