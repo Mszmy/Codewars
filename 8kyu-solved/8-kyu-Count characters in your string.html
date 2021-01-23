@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Count characters in your string</title>
+ 	<script type="text/javascript">
+  /*
+  The main idea is to count all the occurring characters in a string. If you have a string like `aba`, then the result should be `{'a': 2, 'b': 1}`.
+
+What if the string is empty? Then the result should be empty object literal, `{}`.
+  */
+ 		function count (string) {  
+ 			// 创建空对象
+        var count = {};
+ 			// 将string通过split转换成arr数组类型
+		  var arr = string.split('');
+
+		    // 遍历数组,并判断在count中是否存在s
+		  arr.forEach(function(s){
+		      count[s] ? count[s]++ : count[s] = 1;
+		  })
+		  return count;
+		}
+ 		
+		// 验证
+		console.log(count("aba"));// { a: 2, b: 1 }
+		console.log(count(''));//{}
+
+	</script>
+</head>
+<body>
+</body>	
+</html>
