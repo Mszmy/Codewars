@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Testing 1-2-3</title>
+ 	<script type="text/javascript">
+  /*
+  Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+The numbering starts at 1. The format is `n: string`. Notice the colon and space in between.
+  */
+ 		var number=function(array){
+ 			var len = array.length;
+ 			if(len ==0){
+ 				return [];
+ 			}else{
+ 				for(var i=0;i<len;i++){
+ 					// 用"index+1: a" 代替 "a"
+ 					array.splice(i,1,parseInt(i+1)+ ": "+ array[i]);
+ 				}
+ 				return array;
+ 			}
+ 		}
+ 		
+		// 验证
+		console.log(number([])); // => []
+		console.log(number(["a", "b", "c"])); // => ["1: a", "2: b", "3: c"]);
+	</script>
+</head>
+<body>
+</body>	
+</html>
