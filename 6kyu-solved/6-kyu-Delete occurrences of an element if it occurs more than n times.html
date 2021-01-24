@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Delete occurrences of an element if it occurs more than n times</title>
+ 	<script type="text/javascript">
+  /*
+  Given a list lst and a number N, create a new list that contains each number of lst at most N times without reordering. For example if N = 2, and the input is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3].
+  */
+ 		function deleteNth(arr,n){
+ 			// 判断数组是否为空
+ 			if(!arr){return null;}
+ 			// 判断当n<1时，则说明1次都不能出现，所以要返回[]
+ 			if(n < 1){return [];}
+
+ 			var result = [];
+ 			var itemCounts = {};
+ 			// 遍历数组 判断每个元素出现的次数
+ 			for(var i=0;i<arr.length;i++){
+ 				var item = arr[i];
+ 				var count = itemCounts[item] ||0;
+ 				// 如果出现的次数<n，就将该元素放入新的数组
+ 				if(count < n){
+ 					result.push(item);
+ 					itemCounts[item] = count+1;
+ 				}
+ 			}
+ 			// console.log(result);
+ 			return result;
+
+ 		}				
+		// 验证
+		console.log(deleteNth ([1,1,1,1],2)); // [1,1]
+		console.log(deleteNth ([20,37,20,21],1)); //[20,37,21]
+	</script>
+</head>
+<body>
+</body>	
+</html>
