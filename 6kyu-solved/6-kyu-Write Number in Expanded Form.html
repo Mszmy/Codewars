@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Write Number in Expanded Form</title>
+ 	<script type="text/javascript">
+ 		function expandedForm(num) {
+ 			// 将num切割放入到数组中
+ 			var arr = num.toString().split('');
+ 			// console.log(arr);
+ 			var length = arr.length;
+ 			var newArr = [];
+ 			for(var i=0;i<length;i++){
+ 				var str = arr[i] * Math.pow(10,length-i-1);
+ 				// 将非0的数字放入到新的数组中
+ 				if(str !=0){
+ 					newArr.push(str);
+ 				}
+ 			}
+ 			// 将新数组中的数据通过+连接
+ 			// console.log(newArr.join(' + '));
+ 			return newArr.join(' + ');
+ 		}
+ 				
+		// 验证
+		console.log(expandedForm(12)); // Should return '10 + 2'
+		console.log(expandedForm(42)); // Should return '40 + 2'
+		console.log(expandedForm(70304)); // Should return '70000 + 300+4'
+	</script>
+</head>
+<body>
+</body>	
+</html>
