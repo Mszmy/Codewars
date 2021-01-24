@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Vasya - Clerk</title>
+ 	<script type="text/javascript">
+  /*
+  The new "Avengers" movie has just been released! There are a lot of people at the cinema box office standing in a huge line. Each of them has a single `100`, `50` or `25` dollar bill. An "Avengers" ticket costs `25 dollars`.
+
+Vasya is currently working as a clerk. He wants to sell a ticket to every single person in this line.
+
+Can Vasya sell a ticket to every person and give change if he initially has no money and sells the tickets strictly in the order people queue?
+
+Return `YES`, if Vasya can sell a ticket to every person and give change with the bills he has at hand at that moment. Otherwise return `NO`.
+  */
+  /*
+  思路：
+  如果是25，就收下，所以n25++;；
+  如果是50，也收下，但要找25，所以n50+; n25--;；
+  如果是100，收下，先找25，再判断n50是否大于0，如果还有50则优先找50，没有就找2张25，所以n25--; n50>0?n50--:n25-=2;；
+  */
+ 		function tickets(peopleInLine){
+ 			// console.log(peopleInLine);
+ 			var len = peopleInLine.length;
+ 			var [n25,n50,n100] = [0,0,0];
+ 			for(let v of peopleInLine){
+ 				if(v == 25) n25++;
+ 				if(v == 50) {n50++; n25--;}
+ 				if(v == 100){n25--; n50>0?n50--:n25-=2;}
+ 				if(n25<0 || n50<0) return 'NO';
+ 				console.log(n25,n50,n100);
+ 			}
+ 			return 'YES';
+ 			
+ 		}
+ 		
+		// 验证
+		console.log(tickets([25, 25, 50, 50])); // YES
+		console.log(tickets([25, 100])); //NO
+		console.log(tickets([25, 25, 50, 50, 100]));//NO
+
+	</script>
+</head>
+<body>
+</body>	
+</html>
