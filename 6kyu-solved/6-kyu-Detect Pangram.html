@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Detect Pangram</title>
+ 	<script type="text/javascript">
+  /*
+  pangram是至少包含一次字母表中每一个字母的句子。即a-z都含有
+  */
+ 		function isPangram(string){
+ 			// 先将字符串全部转为大写
+ 			var str = string.toUpperCase();
+
+ 			// 65-90是a-z
+ 			for(var i=65;i<90;i++){
+ 				if(str.indexOf(String.fromCharCode(i)) == -1){
+ 					return false;
+ 				}
+ 			}
+ 			return true;
+ 		}
+ 		
+		// 验证
+		var string = "The quick brown fox jumps over the lazy dog."
+		console.log(isPangram(string));//true
+		var string2 = "This is not a pangram."
+		console.log(isPangram(string2));//false
+	</script>
+</head>
+<body>
+</body>	
+</html>
