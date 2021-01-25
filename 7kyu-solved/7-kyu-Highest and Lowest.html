@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Highest and Lowest</title>
+ 	<script type="text/javascript">
+  /*
+  In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+返回最大、最小值
+  */
+ 		function highAndLow(numbers){
+ 			var numStr = numbers.split(' ');
+ 			// 降序排序
+ 			numStr.sort((a,b)=>{return b-a;});
+ 			// 返回第一个（最大值）和最后一个（最小值）
+ 			return numStr[0] +' '+numStr[numStr.length-1];;
+ 		}
+ 		
+		// 验证
+		console.log(highAndLow("1 2 3 4 5"));//'5 1'
+		console.log(highAndLow("1 2 -3 4 5")); // "5 -3"
+	</script>
+</head>
+<body>
+</body>	
+</html>
