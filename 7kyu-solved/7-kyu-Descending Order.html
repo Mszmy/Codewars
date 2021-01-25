@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Descending Order</title>
+ 	<script type="text/javascript">
+  /*
+  降序排序
+  */
+ 		function descendingOrder(n){
+ 			// 先将n转换成数组
+ 			var arr = n.toString().split('');
+ 			// 进行降序排序
+ 			arr.sort((a,b)=>{return b-a});
+ 			// console.log(arr);
+ 			// 返回成number类型
+ 			var result = parseInt(arr.join(''));
+ 			// console.log(result);
+ 			return result;
+ 		}
+ 		
+		// 验证
+		console.log(descendingOrder(42145));//54421
+		console.log(descendingOrder(145263));//654321
+	</script>
+</head>
+<body>
+</body>	
+</html>
