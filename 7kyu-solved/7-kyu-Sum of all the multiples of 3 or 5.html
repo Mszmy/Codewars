@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Sum of all the multiples of 3 or 5</title>
+ 	<script type="text/javascript">
+  /*
+  Upto and including `n`, this function will return the sum of all multiples of 3 and 5.
+
+查找到n为止所有满足3的倍数或者5的倍数，然后返回这些数的和
+  */
+ 		function findSum(n) {
+ 			var sum = 0;
+ 			// 遍历找到所有3或5的倍数，再相加返回
+ 			for(var i=1;i<=n;i++){
+ 				if(i % 3==0 || i %5 ==0){
+ 					// console.log(i);
+ 					sum = sum+i;
+ 				}
+ 			}
+ 			// console.log('sum:',sum);
+ 			return sum;
+ 		}
+ 		
+		// 验证
+		console.log(findSum(5));//8
+		console.log(findSum(10)); // 33
+	</script>
+</head>
+<body>
+</body>	
+</html>
