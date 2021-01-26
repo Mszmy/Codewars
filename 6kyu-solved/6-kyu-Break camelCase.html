@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Break camelCase</title>
+ 	<script type="text/javascript">
+  /*
+  Complete the solution so that the function will break up camel casing, using a space between words.
+  */
+		function solution(string) {
+			// string字符串分隔而得到的数组
+			var arr = string.split('');
+			// 全部大写之后得到的数组
+			var strArr = string.toUpperCase().split('');
+			var temp = [];
+			// 获取到大写字母处的index
+			for(var i=0;i<arr.length;i++){
+				if(arr[i] == strArr[i]){
+					temp.push(i);
+					// console.log(temp);
+				}
+			}
+			// 找到位置，插入空格
+			var count = 0;
+			for(var j=0;j<temp.length;j++){
+				// 需要插入空格位置的index坐标
+				// console.log(temp[j]+count);
+				// splice删除元素，并添加新元素。
+				// splice(index，删除数量，新元素)
+				arr.splice(temp[j]+count,0,' ');
+				count ++;
+			}
+			return arr.join('');
+		}
+ 		
+		// 验证
+		console.log(solution("camelCasing"));//"camel Casing"
+		console.log(solution('camelCasingTest'));// 'camel Casing Test', 'Unexpected result'
+	</script>
+</head>
+<body>
+</body>	
+</html>
