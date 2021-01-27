@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Disemvowel Trolls</title>
+ 	<script type="text/javascript">
+  /*
+  Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+Note: for this kata `y` isn't considered a vowel.
+
+**编写一个函数，接受一个字符串并返回一个删除了所有元音的新字符串。注意:这个形符y不被认为是元音。**
+  */
+ 		function disemvowel(str) {
+ 			// console.log(str);
+ 			var vowelArr = ['a','A','e','E','i','I','o','O','u','U'];
+ 			// console.log(vowelArr);
+ 			var strArr = str.split('');
+ 			// console.log(strArr);
+ 			for(var i=0;i<vowelArr.length;i++){
+ 				for(var j=0;j<strArr.length;j++){
+ 					if(vowelArr[i] == strArr[j]){
+ 						// console.log(strArr[j]);
+ 						strArr.splice(j,1);
+ 					}
+ 				}
+ 			}
+ 			var newStr = strArr.join('');
+ 			// console.log(newStr);
+ 			return newStr;
+ 		}
+ 		
+		// 验证
+		console.log(disemvowel("This website is for losers LOL!"));//"Ths wbst s fr lsrs LL!"
+	</script>
+</head>
+<body>
+</body>	
+</html>
