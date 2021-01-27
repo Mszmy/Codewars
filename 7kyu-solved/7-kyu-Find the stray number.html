@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Find the stray number</title>
+ 	<script type="text/javascript">
+  /*
+  You are given an *odd-length* array of integers, in which all of them are the same, except for one single number.
+
+Complete the method which accepts such an array, and returns that single different number.
+
+**The input array will always be valid!** (odd-length >= 3)
+
+**给定一个奇数长度的整数数组，其中除了一个数字之外，其他都是相同的。完成接受这样一个数组的方法，并返回一个不同的数字。输入数组将始终有效!(奇数长的> = 3)**
+  */
+ 		function stray(numbers) {
+ 			// console.log(numbers);
+ 			var len = numbers.length;
+ 			var result =0; 
+ 			if(len % 2 !=0){
+ 				for(var i=0;i<len;i++){
+ 					for(var j=i+1;j<len;j++){
+ 						if(numbers[i] != numbers[j]){
+ 							result = numbers[j];
+ 							// console.log(result);
+ 						}
+ 					}
+ 					break;
+ 				}
+ 				return result;
+ 			}
+ 			return 0;
+ 		}
+ 		
+		// 验证
+		console.log(stray([1,2]));//0
+		console.log(stray([1,1,2]));//2;
+		console.log(stray([17,17,3,17,17,17,17]));//3;
+		console.log(stray([1,2,1]));//2
+	</script>
+</head>
+<body>
+</body>	
+</html>
