@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Exes and Ohs</title>
+ 	<script type="text/javascript">
+  /*
+  Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+**检查一个字符串是否有相同数量的'x'和'o'。该方法必须返回一个布尔值，且不区分大小写。字符串可以包含任何字符。**
+  */
+ 		function XO(str) {
+ 			// 将str全部转为小写。并分割放到数组中
+ 			var strArr = str.toLowerCase().split('');
+ 			var xArr = [];
+ 			var oArr = [];
+ 			// 遍历数组，将数组中x和o分别放到新数组中
+ 			for(var i=0;i<strArr.length;i++){
+ 				if(strArr[i] == 'x'){
+ 					xArr.push(strArr[i]);
+ 				}else if(strArr[i] == 'o'){
+ 					oArr.push(strArr[i]);
+ 				}
+ 			}
+ 			// console.log('x:',xArr);
+ 			// console.log('o:',oArr);
+ 			// 判断两个新数组的长度，若相等则说明包含数量相同
+ 			if(xArr.length == oArr.length){
+ 				return true;
+ 			}
+ 			return false;
+ 		}
+ 		
+		// 验证
+		console.log(XO('xo'));//true;
+		console.log(XO("xxOo"));//true;
+		console.log(XO("xxxm"));//false;
+		console.log(XO("ooom"));//false
+	</script>
+</head>
+<body>
+</body>	
+</html>
