@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Help the bookseller !</title>
+ 	<script type="text/javascript">
+  /*
+  A bookseller has lots of books classified in 26 categories labeled A, B, ... Z. Each book has a code `c` of 3, 4, 5 or more characters. The **1st** character of a code is a capital letter which defines the book category.
+
+In the bookseller's stocklist each code `c` is followed by a space and by a positive integer n (int n >= 0) which indicates the quantity of books of this code in stock.
+获取到此类别的总数量
+  */
+ 		function stockList(listOfArt, listOfCat){
+ 			if (!listOfArt.length || !listOfCat.length) return ''
+ 			return listOfCat.map(w => {
+    			const s = listOfArt.reduce((a, b) => a + (b.charAt(0) === w ? +b.split(' ')[1] : 0), 0)
+    				return `(${w} : ${s})`
+  			}).join(' - ')
+ 		}
+ 		
+		// 验证
+		b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+		c = ["A", "B"]
+		console.log(stockList(b, c));//"(A : 200) - (B : 1140)"
+	</script>
+</head>
+<body>
+</body>	
+</html>
