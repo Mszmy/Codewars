@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Alternate capitalization</title>
+ 	<script type="text/javascript">
+  /*
+给定一个字符串，将占用偶数索引和奇数索引的字母分别大写，并返回如下所示。索引0将被认为是偶数。
+  */
+ 		function capitalize(s){
+ 			var arr = s.split('');
+ 			// 深拷贝arr
+ 			var arr2 = JSON.parse(JSON.stringify(arr))
+ 			var len = arr.length;
+ 			var result =[];
+ 			for(var i=0;i<len;i++){
+ 				// 偶数索引--转为大写
+ 				if(i % 2 == 0){
+ 					// 将转为大写的字母替换掉原来字母
+ 					arr.splice(i,1,arr[i].toUpperCase());
+ 				}else{
+ 					// 对奇数索引处理
+ 					arr2.splice(i,1,arr[i].toUpperCase());
+ 				}
+ 			}
+ 			result.push(arr.join(''));
+ 			result.push(arr2.join(''));
+ 			return result;
+ 		}
+ 		
+		// 验证
+		console.log(capitalize("abcdef"));// ['AbCdEf', 'aBcDeF']
+		console.log(capitalize("codewarriors"));//['CoDeWaRrIoRs', 'cOdEwArRiOrS']
+	</script>
+</head>
+<body>
+</body>	
+</html>
