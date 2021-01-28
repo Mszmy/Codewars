@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Simple Fun #176: Reverse Letter</title>
+ 	<script type="text/javascript">
+  /*
+  Given a string `str`, reverse it omitting all non-alphabetic characters.
+  */
+ 		function reverseLetter(str) {
+ 			console.log(str);
+ 			// 先匹配出全为字母的部分
+ 			var strArr = str.match(/[a-zA-Z]/g);
+ 			// console.log(strArr);
+ 			var arr = [];
+ 			// 遍历将字母逆序
+ 			for(var i=0;i<strArr.length;i++){
+ 				arr.unshift(strArr[i]);
+ 			}
+ 			// console.log(arr);
+ 			// 拼接成字符串返回
+ 			result = arr.join('');
+ 			return result;
+ 		}
+ 		
+		// 验证
+		console.log(reverseLetter("krishan"));//"nahsirk")
+		console.log(reverseLetter('ultr53o?n'));//nortlu
+	</script>
+</head>
+<body>
+</body>	
+</html>
