@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Find the middle element</title>
+ 	<script type="text/javascript">
+  /*
+  As a part of this Kata, you need to create a function that when provided with a triplet, returns the index of the numerical element that lies between the other two elements.
+
+The input to the function will be an array of three distinct numbers (Haskell: a tuple).
+
+**您需要创建一个函数，当提供三元组时，返回位于其他两个元素之间的数值元素的索引。函数的输入将是一个由三个不同数字组成的数组(Haskell:一个元组)。**
+  */
+ 		var gimme = function (inputArray) {
+ 			// console.log(inputArray);
+ 			// 先深拷贝原数组
+			var arr = JSON.parse(JSON.stringify(inputArray))
+ 			// var arr = inputArray;
+ 			// 先将数组排序找出第二个数(此处按照降序排序)->sort改变了原数组
+ 			inputArray.sort((a,b) =>{return b-a;});
+
+ 			// 经过排序后，arr为原数组，inputArray为排序后的数组
+ 			// console.log(arr);
+ 			// console.log(inputArray);
+
+			// 找出原数组中和该数相同的index
+			for(var i=0;i<arr.length;i++){
+				if(arr[i] == inputArray[1]){
+					return i;
+				}
+			}
+ 		};
+ 		
+		// 验证
+		console.log(gimme([2, 3, 1]));// 0
+		console.log(gimme([5,10,14]));// 1
+	</script>
+</head>
+<body>
+</body>	
+</html>
