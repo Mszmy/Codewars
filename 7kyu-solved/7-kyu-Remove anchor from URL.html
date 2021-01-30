@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Remove anchor from URL</title>
+ 	<script type="text/javascript">
+  /*
+  Complete the function/method so that it returns the url with anything after the anchor (`#`) removed.
+  */
+ 		function removeUrlAnchor(url){
+ 			var index = url.indexOf('#');
+ 			// console.log(index);
+ 			if(index !=-1){
+ 				 url = url.substring(0,index);
+ 			}
+ 			return url;
+ 		}
+ 		
+		// 验证
+		console.log(removeUrlAnchor("www.codewars.com#about"));// www.codewars.com
+		console.log(removeUrlAnchor("www.codewars.com?page=1"));//www.codewars.com?page=1
+	</script>
+</head>
+<body>
+</body>	
+</html>
