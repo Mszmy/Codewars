@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Love vs friendship</title>
+ 	<script type="text/javascript">
+  /*
+  If　`a = 1, b = 2, c = 3 ... z = 26`
+
+Then `l + o + v + e = 54`
+
+and `f + r + i + e + n + d + s + h + i + p = 108`
+
+So `friendship` is twice stronger than `love` :-)
+
+The input will always be in lowercase and never be empty.
+  */
+ 		function wordsToMarks(string){
+ 			var arr = [];
+ 			var count = 0;
+ 			for(var i=0;i<string.length;i++){
+ 				// 获取到string每个字母的大小，放入到新数组中
+ 				var temp = string.substring(i,i+1).charCodeAt()-96;
+ 				arr.push(temp);
+ 			}
+ 			// console.log(arr);
+ 			for(var j=0;j<arr.length;j++){
+ 				count += arr[j];
+ 			}
+ 			return count;
+ 		}
+ 		
+		// 验证
+		console.log(wordsToMarks("attitude"));// 100
+		console.log(wordsToMarks("friends"));//75
+	</script>
+</head>
+<body>
+</body>	
+</html>
