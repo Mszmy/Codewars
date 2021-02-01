@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Round up to the next multiple of 5</title>
+ 	<script type="text/javascript">
+  /*
+  Given an integer as input, can you round it to the next (meaning, "higher") multiple of 5?
+
+**四舍五入到下一个5的倍数**
+  */
+ 		function roundToNext5(n){
+ 			console.log('n',n);
+ 			if(n %5 !=0){
+ 				return (Math.floor(n/5)+1)*5;
+ 			}
+ 			return n;
+ 		}
+ 		
+		// 验证
+		[
+		  [0,0],
+		  [1,5],
+		  [3,5],
+		  [5,5],
+		  [7,10],
+		  [39,40],
+		  [-2,0],
+		  [-5,-5]
+		].forEach(
+		  ([x,out])=> console.log(roundToNext5(x), out)
+		);
+	</script>
+</head>
+<body>
+</body>	
+</html>
