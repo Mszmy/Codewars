@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Find the next perfect square!</title>
+ 	<script type="text/javascript">
+  /*
+  * 找下一个完全平方数
+  */
+ 		function findNextSquare(sq) {
+ 			// console.log(sq);
+			for(var i=0;i>-1;i++){
+				var square = i*i;
+        		if(square==sq){
+        			// console.log('i',i);
+        			return (i+1)*(i+1);
+        		}else if(square>sq){
+        			return -1;
+        		} 
+			}
+ 		}
+
+ 		// 验证
+		console.log(findNextSquare(121));// 144
+		console.log(findNextSquare(625));// 676
+		console.log(findNextSquare(114));// -1
+	</script>
+</head>
+<body>
+</body>	
+</html>
