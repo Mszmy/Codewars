@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Predict your age!</title>
+ 	<script type="text/javascript">
+  /*
+  * 列出你曾祖父去世时的年龄。把每个数单独乘起来。把它们加在一起。对结果开平方根。除以2。
+  */
+ 		function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
+ 			let arr = [age1,age2,age3,age4,age5,age6,age7,age8];
+ 			console.log(arr);
+ 			let sum = 0;
+ 			for(var i=0;i<arr.length;i++){
+ 				sum +=(arr[i] * arr[i]);
+ 			}
+ 			return Math.floor(Math.sqrt(sum)/2);
+ 		}
+
+ 		// 验证
+		console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45));// 86
+	</script>
+</head>
+<body>
+</body>	
+</html>
