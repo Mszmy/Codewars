@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>You're a square!</title>
+ 	<script type="text/javascript">
+  /*
+  *判断是否为完全平方数
+  */
+ 		var isSquare = function(n){
+ 			console.log(n);
+ 			let i = 0;
+ 			if(n!=0){
+ 				while (n > i * i) {
+					i++;
+				}
+				return i * i === n;
+ 			}
+ 			return true;
+ 		}
+
+ 		// 验证
+		console.log(isSquare(-1));// false
+		console.log(isSquare(25));//true
+		console.log(isSquare(0));//false
+	</script>
+</head>
+<body>
+</body>	
+</html>
