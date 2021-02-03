@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Sum of odd numbers</title>
+ 	<script type="text/javascript">
+  /*
+  *根据n确定第一个数和该行最后一个数，从而计算。
+  */
+ 		function rowSumOddNumbers(n) {
+ 			// console.log(n);
+ 			var one = n * (n-1) + 1;
+ 			var last = (n-1) * (n+2) + 1;
+ 			// console.log(one)
+ 			var sum = 0;
+ 			for(var i=one;i<=last;i=i+2){
+ 				sum +=i;
+ 			}
+ 			return sum;
+ 		}
+ 		// 验证
+		console.log(rowSumOddNumbers(1)); // 1
+		console.log(rowSumOddNumbers(2)); // 3 + 5 = 8
+		console.log(rowSumOddNumbers(42));//74088
+	</script>
+</head>
+<body>
+</body>	
+</html>
