@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Sorted? yes? no? how?</title>
+ 	<script type="text/javascript">
+ 		function isSortedAndHow(array) {
+ 			// console.log(array);
+ 			var array1 = JSON.parse(JSON.stringify(array));
+ 			var array2 = JSON.parse(JSON.stringify(array));
+ 			var array3 = JSON.parse(JSON.stringify(array));
+
+
+ 			// console.log('array深拷贝后',array1);
+
+ 			// 升序排序
+ 			var arr = array.sort((a,b)=>{return a-b});
+ 			// console.log('array升序排序后',arr);
+
+ 			// 降序排序
+ 			var arr1 = array3.sort((a,b)=>{return b-a});
+ 			// console.log('array降序排序后',arr1);
+
+ 			if(arr.toString() == array1.toString()){
+ 				return 'yes, ascending';
+ 			}else if(arr1.toString() == array2.toString()){
+ 				return 'yes, descending';
+ 			}else{
+ 				return 'no';
+ 			}
+ 			
+ 		}
+ 		// 验证
+		console.log(isSortedAndHow([1,2])); // 'yes, ascending'
+		console.log(isSortedAndHow([15, 7, 3, -8])); // 'yes, descending'
+		console.log(isSortedAndHow([4, 2, 30]));//'no'
+	</script>
+</head>
+<body>
+</body>	
+</html>
