@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Sort Numbers</title>
+ 	<script type="text/javascript">
+ 		function solution(nums){
+ 			// console.log(nums);
+ 			return (nums || []).sort((a, b)=>{return a - b});
+ 		}
+ 
+ 		// 验证
+		console.log(solution([1,2,10,50,5])); // [1,2,5,10,50]
+		console.log(solution(null)); //[]
+	</script>
+</head>
+<body>
+</body>	
+</html>
