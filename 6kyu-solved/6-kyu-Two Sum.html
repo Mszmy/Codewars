@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Two Sum</title>
+ 	<script type="text/javascript">
+  /*
+  Write a function that takes an array of numbers (integers for the tests) and a target number. It should find two different items in the array that, when added together, give the target value. The indices of these items should then be returned in a tuple like so: `(index1, index2)`.
+
+  **返回相加等于目标和的两个index**
+  
+  */
+ 		function twoSum(numbers, target) {
+ 			// console.log(numbers,target);
+ 			for(var i=0;i<numbers.length;i++){
+ 				for(var j=i+1;j<numbers.length;j++){
+ 					if(numbers[i] + numbers[j] == target){
+ 						// console.log(numbers[i]+numbers[j] == target);
+ 						return [i,j];
+ 					}
+ 				}			
+ 			}
+ 		}
+ 
+ 		// 验证
+		console.log(twoSum([1,2,3],4)); // [0,2]
+		console.log(twoSum([1234,5678,9012],14690));//[1,2])
+	</script>
+</head>
+<body>
+</body>	
+</html>
