@@ -10,10 +10,10 @@
 **如果字符串已经以一个数字结束，则该数字应该加1;如果字符串没有以数字结束。数字1应该被附加到新的字符串中
   */
  		function incrementString (strng) {
- 			console.log(strng);
+//  			console.log(strng);
  			var arr = strng.split('');
  			var num = strng.match(/(\d*)$/)[0];
- 			console.log(typeof num);
+//  			console.log(typeof num);
  			var len = strng.length - num.length;
  			if(num !=0){
  				for(var i=num.length-1;i>0;i--){
@@ -23,8 +23,7 @@
  				}
  				return strng.substring(0,len) + (parseInt(num)+1);
  			}else{
- 				console.log((/0{1,}/g).test(num))
- 				// console.log('2')
+//  				console.log((/0{1,}/g).test(num))
  				if((/0{1,}/g).test(num)){
  					for(var i=num.length-1;i>0;i--){
  					if(parseInt(num[i])==0){
