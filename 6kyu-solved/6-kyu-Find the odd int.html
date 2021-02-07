@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Find the odd int</title>
+ 	<script type="text/javascript">
+ 		function findOdd(A) {
+ 			// 总思路：统计每个数出现的次数，并且记住索引
+ 			// console.log(A);
+ 			var map = {};
+ 			for(var i=0;i<A.length;i++){
+ 				// 获取到每个元素
+ 				var key = A[i];
+ 				// console.log('key',key);
+ 				// 通过判断新对象中是否含有，则来判断每个数出现的次数
+ 				if(map[key]){
+ 					map[key] ++;
+ 				}else{
+ 					map[key] =1;
+ 				}
+
+ 			}
+ 			// console.log('map:',map);
+ 			// 遍历对象
+ 			for(var key in map){
+ 				// console.log(map[key]);
+ 				if(map[key] %2 !=0){
+ 					return parseInt(key);
+ 				}
+ 			}
+ 		}
+
+		// 验证
+		console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]));// 5
+		console.log(findOdd([10]));//10
+	</script>
+</head>
+<body>
+</body>	
+</html>
