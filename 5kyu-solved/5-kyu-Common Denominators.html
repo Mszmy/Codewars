@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Common Denominators</title>
+ 	<script type="text/javascript">
+ 		function convertFrac(lst){
+ 			// console.log(lst);
+ 			var mulArr = [];
+ 			var second = [];
+ 			for(var i=0;i<lst.length;i++){
+ 				// console.log('second number:',lst[i][1]);
+ 				second.push(lst[i][1]);
+ 				// console.log('second',second)
+ 				for(var j=i+1;j<lst.length;j++){
+ 					var mul = lst[i][1] * lst[j][1];
+ 					// console.log('mul',mul);
+ 					mulArr.push(mul);
+ 				}
+ 			}
+ 			// console.log('second',second)
+ 			mulArr.sort((a,b)=>{return b-a;});
+ 			// console.log(mulArr[0]);
+ 			D = mulArr[0]
+ 			var result = [];
+ 			for(var z=0;z<second.length;z++){
+ 				result.push([D/second[z],D]);
+ 			}
+ 			// console.log('result',result)
+ 			return '('+result[0]+')'+'('+result[1]+')'+'('+result[2]+')';
+ 			
+ 		}
+
+		// 验证
+		var lst = [ [1, 2], [1, 3], [1, 4] ]
+		console.log(convertFrac(lst));//'(6,12)(4,12)(3,12)'
+
+	</script>
+</head>
+<body>
+</body>	
+</html>
