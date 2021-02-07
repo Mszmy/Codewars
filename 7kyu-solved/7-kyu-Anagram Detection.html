@@ -13,7 +13,7 @@
 			var tStr = test.toLowerCase().split('').sort().join('');
 			var oStr = original.toLowerCase().split('').sort().join('');
 			console.log(tStr,oStr);
-			if(oStr.indexOf(tStr) !=-1){
+			if(oStr===tStr){
 				return true;
 			}
 			return false;
