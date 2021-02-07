@@ -11,24 +11,21 @@ Write a function to calculate factorial for a given input. If input is below 0 o
 
 求阶乘
   */
- 		function factorial(n){
- 			console.log('n',n);
- 			var num =n;
- 			if(n>1 && n<12){
- 				for(var i=0;i<n;i++){
-	 				if(n-1!=1){
-	 					num *=n-1;
-	 					n--;
-	 					// console.log(num);
-	 				}
- 				}
- 				return num;
- 			}else if(n == 0 || n == 1){
- 				return 1;
- 			}else{
- 				return RangeError;
+ 			function factorial(n){
+//  			console.log('n',n);
+ 			var i =1;
+ 			var sum =1;
+ 				
+ 				if(n>1 && n<=12){
+ 					while (i <= n) {
+        				sum *= i;
+        				i++;
+    				}
+ 					return sum;
+ 				}else if(n == 0 || n == 1){
+ 					return 1;
+ 				}else{throw new RangeError();}
  			}
- 		}
  		
 		// 验证
 		console.log(factorial(0));//1
