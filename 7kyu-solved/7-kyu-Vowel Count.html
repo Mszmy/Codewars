@@ -8,15 +8,21 @@
 **返回给定字符串中元音的数量(count)。输入只包含小写字母或空格**
   */
  		function getCount(str) {
+ 			console.log(str)
   			var vowelsCount = 0;
   			// 用正则表达式匹配到含有元音字母部分
   			var result = str.match(/[aeiou]/g);
+  			console.log(result);
+  			if(result == null){
+  				return 0;
+  			}
   			vowelsCount = result.length;
   			return vowelsCount;
   		}
  		
 		// 验证
 		console.log(getCount("abracadabra"));// 5
+		console.log(getCount('my pyx'))//0
 	</script>
 </head>
 <body>
