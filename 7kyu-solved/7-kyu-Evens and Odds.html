@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Evens and Odds</title>
+ 	<script type="text/javascript">
+  /*
+  This kata is about converting numbers to their binary or hexadecimal representation:
+
+- If a number is even, convert it to binary.
+- If a number is odd, convert it to hex.
+
+将数字转换成二进制或十六进制表示的:
+
+如果一个数是偶数，就把它转换成二进制数。如果一个数字是奇数，将其转换为十六进制。
+
+
+  */
+ 		function evensAndOdds(num){
+ 			// console.log(num);
+ 			if(num % 2 == 0){
+ 				return num.toString(2);
+ 			}else{
+ 				return parseInt(num).toString(16);
+ 			}
+ 		}
+		
+		// 验证
+		console.log(evensAndOdds(2));//'10'
+		console.log(evensAndOdds(13));//'d'
+	</script>
+</head>
+<body>
+</body>	
+</html>
