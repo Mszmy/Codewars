@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Life Path Number</title>
+ 	<script type="text/javascript">
+  /*
+  year: 1 + 8 + 7 + 9 = 25; 2 + 5 = 7
+month: 0 + 3 = 3
+day: 1 + 4 = 5
+final result: 7 + 3 + 5 = 15; 1 + 5 = 6
+  */
+ 		function lifePathNumber(dateOfBirth) {
+ 			// console.log(dateOfBirth);
+ 			var arr = dateOfBirth.split('-').join('').split('');
+ 			// console.log(arr);
+ 			var year1 = parseInt(arr[0]) + +arr[1] + +arr[2] + +arr[3];
+ 			// console.log(year1)
+ 			var year = Math.floor(year1 / 10) + year1 % 10;
+ 			// console.log(year);
+
+ 			var mouth = parseInt(arr[4]) + +arr[5];
+ 			var day = parseInt(arr[6]) + +arr[7];
+
+ 			var final = year + mouth + day;
+ 			// console.log(final);
+ 			var lifenum = (Math.floor(final / 10) + final % 10);
+ 			if(lifenum % 10 == 0){
+ 				lifenum = (Math.floor(lifenum / 10) + lifenum % 10);
+ 			}
+  			return lifenum;
+  		}
+
+		
+		// 验证
+		console.log(lifePathNumber("1879-03-14"));// 6
+		console.log(lifePathNumber("1815-12-10"));// 1
+		console.log(lifePathNumber('1961-07-04'));//1
+	</script>
+</head>
+<body>
+</body>	
+</html>
