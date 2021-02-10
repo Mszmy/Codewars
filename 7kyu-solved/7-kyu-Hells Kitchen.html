@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Hells Kitchen</title>
+ 	<script type="text/javascript">
+  /*
+  Obviously the words should be Caps, Every word should end with '!!!!', Any letter 'a' or 'A' should become '@', Any other vowel should become '*'.
+
+**这些单词应该是大写的，每个单词都应该以“!!!!”结尾'，任何字母'a'或'A'应该变成'@'，任何其他元音应该变成'*'。**
+  */
+ 		function gordon(a){
+ 			// 1先全部转为大写
+ 			var aU = a.toUpperCase();
+ 			var temp = aU.replace(/[aA]/g,'@').replace(/[AEIOU]/g,'*').split(' ');
+ 			for(var i=0;i<temp.length;i++){
+ 				temp[i] += '!!!!';
+ 			}
+ 			var result = temp.join(' ');
+ 			// console.log(result);
+ 			return result;
+ 		}
+		
+		// // 验证
+		console.log(gordon('What feck damn cake'));// 'WH@T!!!! F*CK!!!! D@MN!!!! C@K*!!!!');
+		console.log(gordon('are you stu pid'));// '@R*!!!! Y**!!!! ST*!!!! P*D!!!!'
+	</script>
+</head>
+<body>
+</body>	
+</html>
