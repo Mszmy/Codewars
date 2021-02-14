@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Guess the Sequence</title>
+ 	<script type="text/javascript">
+  /*
+  You must guess a sequence.It will have something to do with the number given.
+  */
+ 		function sequence(x) {
+ 			var temp = [];
+ 			for(var i =1;i<=x;i++){
+ 				temp.push(i);
+ 			}
+ 			result = temp.sort();
+ 			// console.log(result);
+ 			return result;
+ 		}
+		// // 验证
+		console.log(sequence(16)); //[1, 10, 11, 12, 13, 14, 15, 16, 2, 3, 4, 5, 6, 7, 8, 9]
+		console.log(sequence(9));//[1, 2, 3, 4, 5, 6, 7, 8, 9]
+	</script>
+</head>
+<body>
+</body>	
+</html>
