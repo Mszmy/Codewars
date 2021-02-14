@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Elevator Distance</title>
+ 	<script type="text/javascript">
+  /*
+  Imagine you start on the 5th floor of a building, then travel down to the 2nd floor, then back up to the 8th floor. You have travelled a total of 3 + 6 = 9 floors of distance.
+  */
+ 		function elevatorDistance(array) {
+ 			var temp = [];
+ 			var sum =0; temp = 0;
+ 			for(var i=0;i<array.length-1;i++){
+ 				temp = array[i] - array[i+1];
+ 				temp = temp>0?temp:(-temp);
+ 				// console.log('temp',temp);
+ 				sum = sum + temp;
+ 				// temp.push(sum);
+ 				// console.log('sum;',sum);
+ 			}
+ 			// console.log(sum);
+ 			return sum;
+ 		}
+		// // 验证
+		console.log(elevatorDistance([5,2,8]));// 9
+		console.log(elevatorDistance([1,2,3]));//2
+	</script>
+</head>
+<body>
+</body>	
+</html>
