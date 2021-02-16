@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Century From Year</title>
+ 	<script type="text/javascript">
+  /*
+  The first century spans from the **year 1** *up to* and **including the year 100**, **The second** - *from the year 101 up to and including the year 200*, etc.
+
+Given a year, return the century it is in.
+
+**第一个世纪从公元1年到公元100年，第二，从公元101年到公元200年，等等。**
+  */
+ 		function century(year) {
+ 			// console.log(year);
+ 			return Math.ceil(year/100);
+ 		}
+ 		
+		// 验证
+		console.log(century(1705));//18
+		console.log(century(1900));//19
+		console.log(century(1601));//17
+		console.log(century(2000));//20
+		console.log(century(89));//1
+	</script>
+</head>
+<body>
+</body>	
+</html>
