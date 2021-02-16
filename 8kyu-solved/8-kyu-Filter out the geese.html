@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Filter out the geese</title>
+ 	<script type="text/javascript">
+  /*
+  **编写一个函数gooseFilter/goose_filter/ gooseFilter，它接受一个字符串数组作为参数，并返回一个过滤后的数组，该数组包含相同的元素，但去掉了'geese'。**
+  */
+ 		function gooseFilter (birds) {
+  			var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  			// console.log(birds);
+  			for(var i=0;i<birds.length;i++){
+  				for(var j=0;j<geese.length;j++){
+  					if(birds[i] == geese[j]){
+  						birds.splice(i,1);
+  						i=i-1;
+  					}
+  				}
+  			}
+  			return birds;
+
+		};
+ 		
+		// 验证
+		console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));// ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
+	</script>
+</head>
+<body>
+</body>	
+</html>
