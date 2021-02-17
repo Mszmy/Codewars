@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Spoonerize Me</title>
+ 	<script type="text/javascript">
+  /*
+  In its most basic form a spoonerism is a two word phrase in which only the first letters of each word are swapped:
+
+"not picking" --> "pot nicking"
+
+Your task is to create a function that takes a string of two words, separated by a space: `words` and returns a spoonerism of those words in a string, as in the above example.
+
+**首字母互换**
+  */
+    function spoonerize(words) {
+      // console.log(words)
+      var arr = words.split(' ');
+      // console.log(arr)
+      var arr1 =arr[0].split('')
+      var arr2 = arr[1].split('')
+      // console.log(arr1)
+      // console.log(arr2)
+
+      var temp1 = arr2[0]
+      var temp2 = arr1[0]
+      arr1.shift()
+      arr2.shift()
+      // console.log(arr2)
+      // console.log('arr1',arr1)
+      var result = temp1 + arr1.join('') +' '+ temp2 + arr2.join('')
+      // console.log('result',result)
+      return result
+
+    }
+ 		
+		// 验证
+		console.log(spoonerize("nit picking"));//"pit nicking"
+    console.log(spoonerize("jelly beans"));// "belly jeans"
+	</script>
+</head>
+<body>
+</body>	
+</html>
