@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Switcheroo</title>
+ 	<script type="text/javascript">
+  /*
+  切换a和b的位置，不动c
+  */
+    function switcheroo(x){
+      // console.log(x);
+      // 正则表达式检测传进的字符串中是否具有a或b
+      var t = /[a|b]/.test(x);
+      if(t){
+        var arr = x.split('');
+        // 将a和b进行替换
+        for(var i=0;i<arr.length;i++){
+          if(arr[i]=='a')arr[i]='b';
+          else if(arr[i] =='b')arr[i] = 'a';
+          // console.log('arr',arr);
+        }
+        return arr.join('');
+      }else{
+        return x;
+      }
+    }
+ 		
+		// 验证
+		console.log(switcheroo('abc'));// 'bac'
+    console.log(switcheroo('aaabcccbaaa'));// 'bbbacccabbb'
+    console.log(switcheroo('ccccc'));// 'ccccc'
+    console.log(switcheroo('ab'));//ba
+	</script>
+</head>
+<body>
+</body>	
+</html>
