@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Beginner - Lost Without a Map</title>
+ 	<script type="text/javascript">
+  /*
+  Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index `0` will be considered even.
+
+**给定一个字符串，将占用偶数索引和奇数索引的字母分别大写，并返回如下所示。索引0将被认为是偶数。**
+  */
+    function maps(x){
+      // console.log(x)
+      var result = JSON.parse(JSON.stringify(x))
+      for(var i=0;i<result.length;i++){
+        result.splice(i,1,result[i]*2)
+      }
+      return result;
+    }
+ 		
+		// 验证
+		console.log(maps([1,2,3]));//[2,4,6]
+	</script>
+</head>
+<body>
+</body>	
+</html>
