@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Clean up after your dog</title>
+ 	<script type="text/javascript">
+    function crap(x, bags, cap){
+      // console.log(x,bags,cap)
+      var numA = 0
+      var numD = 0
+
+      for(var i=0;i<x.length;i++){
+        for(var j=0;j<x[i].length;j++)
+          // console.log(x[i][j] == '@')
+          if(x[i][j] == '@')numA++;
+          else if(x[i][j] == 'D') numD ++;
+      }
+      // console.log(numA,numD)
+      if(numD !=0)return 'Dog!!'
+      else if(numA >cap)return 'Cr@p';
+      else if(numA <= cap) return 'Clean'
+    }
+ 		
+		// 验证
+		console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@', '_']], 2, 2));// "Clean"
+    console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@', '_']], 1, 1));// "Cr@p"
+    console.log(crap([['_','_'], ['_','@'], ['D','_']], 2, 2));// "Dog!!"
+	</script>
+</head>
+<body>
+</body>	
+</html>
