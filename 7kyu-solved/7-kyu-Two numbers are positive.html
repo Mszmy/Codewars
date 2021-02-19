@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Two numbers are positive</title>
+ 	<script type="text/javascript">
+  /*
+  Your job is to wite a function, which takes three integers `a`, `b`, and `c` as arguments, and returns `True` if exactly two of of the three integers are positive numbers, and `False` - otherwise.
+
+**它以三个整数a、b和c作为参数，如果三个整数中恰好有两个是正数则返回True，否则返回False。**
+  */
+    function twoArePositive(a, b, c) {
+      // console.log(a,b,c)
+      var arr = [a,b,c];
+      // console.log(arr)
+      var num = 0
+      for(var i=0;i<arr.length;i++){
+        if(arr[i]>0)num ++;
+      }
+      if(num == 2)return true;
+      return false;
+    }
+ 		
+		// 验证
+		console.log(twoArePositive(2,4,-3));//true
+    console.log(twoArePositive(-4,6,8));//true
+    console.log(twoArePositive(-14,-3,-4));//false
+
+	</script>
+</head>
+<body>
+</body>	
+</html>
