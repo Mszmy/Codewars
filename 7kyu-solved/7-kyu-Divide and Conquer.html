@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Divide and Conquer</title>
+ 	<script type="text/javascript">
+  /*
+  Given a mixed array of number and string representations of integers, add up the string integers and subtract this from the total of the non-string integers.
+
+给定一个由数字和字符串表示的整数混合数组，将字符串整数相加，然后从非字符串整数的总数中减去这个数。
+  */
+    function divCon(x){
+      console.log(x)
+      var temp = [];
+      var tempA = [];
+      var sum = 0;
+      var sumS = 0;
+      for(var i=0;i<x.length;i++){
+        if(typeof x[i] == 'string'){
+          // console.log(x[i]);
+          temp.push(parseInt(x[i]))
+        }else{
+          tempA.push(x[i])
+        }
+      }
+      // console.log(temp)
+      for(var j=0;j<temp.length;j++){
+        sum += temp[j];
+      }
+      for(var z=0;z<tempA.length;z++){
+        sumS += tempA[z];
+      }
+      return sumS - sum;
+    }
+ 		
+		// 验证
+		console.log(divCon([9,3,'7','3']));//2
+    console.log(divCon(['5', '0', 9, 3, 2, 1, '9', 6, 7]));//14
+	</script>
+</head>
+<body>
+</body>	
+</html>
