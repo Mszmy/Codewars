@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Sort by Last Char</title>
+ 	<script type="text/javascript">
+  /*
+  **给定一个单词字符串(x)，需要返回一个单词数组，按每个单词中的最后一个字符按字母顺序排序。如果两个单词的最后一个字母相同，它们返回的数组应该按照它们在给定字符串中出现的顺序显示它们。**
+  */
+    function last(x){
+      // console.log((/^[ ]+$/).test(x))
+      var arr = x.split(' ')
+      if(!(/^[ ]+$/).test(x)){
+        var result = arr.sort((a,b)=>{return a[a.length-1].localeCompare(b[b.length-1])})
+        return result;
+      }
+      return arr;
+    }
+ 		
+		// 验证
+		// console.log(last('man i need a taxi up to ubud'));// ['a', 'need', 'ubud', 'i', 'taxi', 'man', 'to', 'up']
+    console.log(last('    '))
+	</script>
+</head>
+<body>
+</body>	
+</html>
