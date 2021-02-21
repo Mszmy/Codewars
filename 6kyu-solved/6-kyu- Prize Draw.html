@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Prize Draw</title>
+ 	<script type="text/javascript">
+        function rank(st, we, n) {
+            let names = st.split(',')
+            if (!st.length) return 'No participants'
+            if (names.length < n) return 'Not enough participants'
+            return names.map((_, i) => ({
+                name: _,
+                s: [..._.toLowerCase()].reduce((a, b) => a + b.charCodeAt() - 95, 0) * we[i]
+            }))
+            .sort((a, b) => a.name > b.name)
+            .sort((a, b) => b.s - a.s)
+            [n - 1].name
+        }
+
+
+ 		
+		// 验证
+		console.log(rank("Addison,Jayden,Sofia,Michael,Andrew,Lily,Benjamin", [4, 2, 1, 4, 3, 1, 2], 4));// "Benjamin"
+	</script>
+</head>
+<body>
+</body>	
+</html>
