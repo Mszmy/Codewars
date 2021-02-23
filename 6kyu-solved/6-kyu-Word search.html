@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Word search</title>
+ 	<script type="text/javascript">
+        function indexOf (words, target) {
+            // 二分法查找
+            let first = 0, last = words.length - 1;
+            while (first < last) {
+                let middle = parseInt((first + last) / 2);  
+                if (words[middle].length < target.length) {
+                    first = middle + 1;
+                } else {
+                    last = middle - 1;
+                }
+            }
+            return words.indexOf(target, first);
+        };
+    
+        // 验证
+        console.log(indexOf(['JaCk', 'Jack', 'jack', 'jackk', 'COdewars', 'codeWars', 'abcdefgh', 'codewars'], 'codewars'));// 7
+        console.log(indexOf(['cP', 'rE', 'sZ', 'am', 'bt', 'ev', 'hq', 'rx', 'yi', 'akC', 'nrcVpx', 'iKMVqsj'], 'akC'));// 9
+	</script>
+</head>
+<body>
+</body>	
+</html>
