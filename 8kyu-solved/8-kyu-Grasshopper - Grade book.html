@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Grasshopper - Grade book</title>
+ 	<script type="text/javascript">
+    /*完成该函数，以便它找到传递给它的三个分数的**平均值**，并返回与该成绩相关的字母值。*/
+        function getGrade (s1, s2, s3) {
+            console.log(s1,s2,s3)
+            var score = (s1 + s2 + s3)/3
+            if(score<60 && score >=0)return 'F';
+            else if(score<70 && score >=60 )return 'D'
+            else if(score<80 && score >=70 )return 'C'
+            else if(score<90 && score >=80 )return 'B'
+            else return 'A'
+        }
+    
+        // 验证
+        console.log(getGrade(95,90,93));// 'A'
+        console.log(getGrade(44,55,52));// 'F'
+	</script>
+</head>
+<body>
+</body>	
+</html>
