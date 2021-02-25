@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Convert string to camel case</title>
+ 	<script type="text/javascript">
+    /*Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized **only** if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).*/
+        function toCamelCase(str){
+            // console.log(str)
+            // 利用正则表达式分隔字符串
+            if(str=='')return ''
+            var arr = str.split(/[-_]/)
+            // console.log(arr)
+            for(var i=1;i<arr.length;i++){
+                arr[i] = arr[i][0].toUpperCase()+arr[i].substring(1,arr[i].length)
+            }
+            return arr.join('')
+
+        }
+    
+        // 验证
+        console.log(toCamelCase(''));// ''
+        console.log(toCamelCase("the_stealth_warrior"));//"theStealthWarrior"
+        console.log(toCamelCase("The-Stealth-Warrior"));//TheStealthWarrior"
+	</script>
+</head>
+<body>
+</body>	
+</html>
