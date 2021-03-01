@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Is he gonna survive?</title>
+ 	<script type="text/javascript">
+        function hero(bullets, dragons){
+            // console.log(bullets,dragons)
+            if(bullets < dragons*2)return false
+            return true
+        }
+
+        // 验证
+        console.log(hero(10, 5));// true
+        console.log(hero(7, 4));// false
+        console.log(hero(100, 40));//true
+        console.log(hero(0,1));//false
+	</script>
+</head>
+<body>
+</body>	
+</html>
