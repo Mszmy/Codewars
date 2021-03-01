@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>A Cinema</title>
+ 	<script type="text/javascript">
+        function cinema(boys, girls) {
+            if (boys > girls * 2 || girls > boys * 2) {
+                return null;
+            } else if (boys === girls) {
+                return "".padStart(boys + girls, "BG");
+            } else if (boys > girls) {
+                return "BGB".repeat(boys - girls).padEnd(boys + girls, "GB");    
+            }
+                return "GBG".repeat(girls - boys).padEnd(boys + girls, "BG");    
+        }
+
+
+        // 验证
+        console.log(cinema(1,1));// "BG" 
+        console.log(cinema(5,5));// "BGBGBGBGBG" 
+        console.log(cinema(5,3));// "BGBBGBGB" 
+        console.log(cinema(100,3));//null
+	</script>
+</head>
+<body>
+</body>	
+</html>
