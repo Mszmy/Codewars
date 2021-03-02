@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Separate basic types</title>
+ 	<script type="text/javascript">
+        function separateTypes(input) {
+            // console.log(input)
+            let map = {};
+            let str = [];
+            let num = [];
+            let bool = [];
+            for(let i=0;i<input.length;i++){
+                if(typeof input[i] == 'string')str.push(input[i])
+                else if(typeof input[i] == 'number')num.push(input[i])
+                else if(typeof input[i] == 'boolean')bool.push(input[i])
+            }
+            if(str.length!=0)map['string'] = str;
+            if(num.length!=0)map['number'] = num;
+            if(bool.length!=0)map['boolean'] = bool
+            
+            // console.log(map)
+            return map
+        }
+
+        // 验证
+        console.log(separateTypes(['a', 1, 2, false, 'b']));//{number: [1, 2],string: ['a', 'b'],boolean: [false]}
+        console.log(separateTypes(['a', 1, 2 ]));//{number: [1, 2],  string: ['a']}
+	</script>
+</head>
+<body>
+</body>	
+</html>
