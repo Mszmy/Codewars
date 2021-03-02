@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Shifter words</title>
+ 	<script type="text/javascript">
+        function shifter(s){
+            // console.log(s);
+            if(s == '')return 0
+            // 去重数组
+            let arr = [...new Set(s.split(' '))];
+            // console.log(arr);
+            let num = 0;
+
+            for(let i=0;i<arr.length;i++){
+                if((/[HINOSXZMW]/g).test(arr[i])){
+                    var temp = arr[i].match(/[HINOSXZMW]/g).join('');
+                    if(temp == arr[i])num ++; 
+                }
+            }
+            return num;
+        }
+
+        // 验证
+        console.log(shifter("ON"));// 1
+        console.log(shifter("SOS IN THE HOME"));// 2 
+        console.log(shifter("WHO IS SHIFTER AND WHO IS NO"));//3
+        console.log(shifter(""));//0 
+        console.log(shifter("I III A III"));//2
+	</script>
+</head>
+<body>
+</body>	
+</html>
