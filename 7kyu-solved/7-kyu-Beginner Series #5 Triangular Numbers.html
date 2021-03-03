@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Beginner Series #5 Triangular Numbers</title>
+ 	<script type="text/javascript">
+        function isTriangular(t) {
+            // console.log(t)
+            let a = 1;
+            let b = 1;
+            let c = -2*t;
+            let deta = Math.pow(b,2) - (4 * a * c)
+            if(deta<0)return false;
+            else{
+                let result =(-1 + Math.sqrt(deta))/(2* a)
+                // console.log(result)
+                if(result == 0) return false
+                else if(result % 1 == 0)return true
+                else return false
+            }   
+        }
+
+        // 验证
+        console.log(isTriangular(1));//true
+        console.log(isTriangular(2));//false
+        console.log(isTriangular(14));//false
+
+	</script>
+</head>
+<body>
+</body>	
+</html>
