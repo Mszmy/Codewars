@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Convert an array of strings to array of numbers</title>
+ 	<script type="text/javascript">
+        function toNumberArray(stringarray){
+            // console.log(stringarray)
+            var result = [];
+            for(var i=0;i<stringarray.length;i++){
+                if(stringarray[i]%1 ==0){
+                    result.push(parseInt(stringarray[i]))
+                }else{
+                    result.push(parseFloat(stringarray[i]))
+                }
+            }
+            return result
+        }
+        // 验证
+        console.log(toNumberArray(["1.1","2.2","3.3"]));// [1.1,2.2,3.3]
+        console.log(toNumberArray(['1','2','3']))
+	</script>
+</head>
+<body>
+</body>	
+</html>
