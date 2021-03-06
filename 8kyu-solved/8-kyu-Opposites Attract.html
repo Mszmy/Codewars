@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Opposites Attract</title>
+ 	<script type="text/javascript">
+        function lovefunc(flower1, flower2){
+            // console.log(flower1,flower2)
+            var bool1 = (flower1%2==0) && (flower2%2!=0)
+            var bool2 = (flower2%2==0) && (flower1%2!=0)
+            if(bool1 || bool2)return true;
+            return false;
+        } 
+        // 验证
+        console.log(lovefunc(1,4));// true
+        console.log(lovefunc(2,2));// false
+        console.log(lovefunc(0,1));//true
+        console.log(lovefunc(0,0));//false
+    </script>
+</head>
+<body>
+</body>	
+</html>
