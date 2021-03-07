@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>Grasshopper - Personalized Message</title>
+ 	<script type="text/javascript">
+        function greet (name, owner) {
+            if(name == owner)return 'Hello boss'
+            return 'Hello guest'
+        }
+        // 验证
+        console.log(greet('Daniel', 'Daniel'));// 'Hello boss'
+        console.log(greet('Greg', 'Daniel'));// 'Hello guest'
+    </script>
+</head>
+<body>
+</body>	
+</html>
