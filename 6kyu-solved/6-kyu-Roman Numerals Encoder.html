@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Roman Numerals Encoder</title>
+<script type="text/javascript">
+    function solution(number){
+        // console.log(number)
+        var values=[1000,900,500,400,100,90,50,40,10,9,5,4,1];
+        var symbol=["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+
+        var currentNumber=number;
+        var str="";
+        for(var i=0;i<13;i++)
+        {
+            if(currentNumber>=values[i])
+            {
+                var i_count=parseInt(currentNumber/values[i]);
+                currentNumber=currentNumber%values[i];
+                for(var j=0;j<i_count;j++)
+                {
+                    str+=symbol[i];
+                }
+            }
+        }
+        return str;
+    }
+
+        
+    // 验证
+    // console.log(solution(1));// 'I'
+    // console.log(solution(5));//'V'
+    console.log(solution(8));//'VIII'
+    // console.log(solution(9));//'IX'
+    console.log(solution(11));//'XI'
+    // console.log(solution(1000));// 'M'
+    console.log(solution(2008));//'MMVIII'
+</script>
+</head>
+<body>
+</body>	
+</html>
