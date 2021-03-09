@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Multiplication table</title>
+<script type="text/javascript">
+//------------1----------------
+   /* multiplicationTable = function(size) {
+        // console.log(size)s
+        var temp = [];
+        for(var i=1 ;i<=size;i++){
+            for(var j=1;j<=size;j++){
+                temp.push(i*j);
+            }
+        }
+        var result = [];
+        for(var z=0;z<temp.length;z+=size){
+            result.push(temp.slice(z,z+size));
+        }
+        return result
+    }*/
+    
+    //------------2----------------------
+    multiplicationTable = function(size) {
+        // console.log(size)
+        var result = [];
+        for(var i=0 ;i<size;i++){
+            result[i] = [];
+            for(var j=0;j<size;j++){
+                result[i][j]= (i+1)*(j+1);
+            }
+        }
+        return result
+    }
+        
+    // 验证
+    console.log(multiplicationTable(3));//[[1,2,3], [2,4,6], [3,6,9]]
+</script>
+</head>
+<body>
+</body>	
+</html>
