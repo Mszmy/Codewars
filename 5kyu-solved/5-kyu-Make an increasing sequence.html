@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Make an increasing sequence</title>
+<script type="text/javascript">
+    function increasingSequence(arr){
+        var max=0, p=0, S=arr.length;
+        var cnt=arr.map(_=>1), jump=arr.map(_=>-1);
+  
+        // 倒序进行比较
+        for(var i=S-2;i>=0;i--){
+            var v=arr[i], c=cnt[i];
+            for(var j=i+1;c-1+j<S;j++) 
+                if(v<arr[j] && c<=cnt[j]){
+                    cnt[i]=c=cnt[j]+1; jump[i]=j;
+                }
+            if(max<=c){ max=c; p=i; }
+        }
+        var out=[];
+        while(p!=-1){
+            out.push(arr[p]);
+            p=jump[p];
+        }
+        return out;
+    }
+
+        
+    // 验证
+    // console.log(increasingSequence([1, 1, 1, 2]));// [1, 2]
+    console.log(increasingSequence([186,186,150,200,160,130,197,220]));// [150,160,197,220]
+    // console.log(increasingSequence([1,2,3,4,5]));// [1,2,3,4,5]
+    // console.log(increasingSequence([5,4,3,2,1]));//[5]
+</script>
+</head>
+<body>
+</body>	
+</html>
