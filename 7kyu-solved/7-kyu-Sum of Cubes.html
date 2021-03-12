@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Sum of Cubes</title>
+<script type="text/javascript">
+    function sumCubes(n){
+        // console.log(n) 
+        var sum = 0;
+        for(var i =0;i<=n;i++){
+            sum = sum + Math.pow(i,3);
+        }   
+        return sum
+    }
+    // 验证
+    console.log(sumCubes(1));//1
+    console.log(sumCubes(2));//9
+    console.log(sumCubes(3));//36
+
+
+</script>
+</head>
+<body>
+</body>	
+</html>
