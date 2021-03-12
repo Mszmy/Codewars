@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Reverse the bits in an integer</title>
+<script type="text/javascript">
+    function reverseBits (n) {
+        console.log(n)
+        var temp = n.toString(2).split('').reverse().join('');
+        return parseInt(temp,2);
+    }
+    // 验证
+    console.log(reverseBits(417));//267
+</script>
+</head>
+<body>
+</body>	
+</html>
