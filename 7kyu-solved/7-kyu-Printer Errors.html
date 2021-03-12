@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Printer Errors</title>
+<script type="text/javascript">
+    function printerError(s) {
+        console.log(s)
+        var arr = s.match(/[n-z]/ig)
+        var len;
+        if(arr == null) len = 0
+        else len = arr.length
+        return len + '/' + (s.length)
+    }
+    // 验证
+    // console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"));//"3/56"
+    console.log(printerError('kkkwwwaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz'));//'6/60'
+    console.log(printerError('aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmm'));//0
+</script>
+</head>
+<body>
+</body>	
+</html>
