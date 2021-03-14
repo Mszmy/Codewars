@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Cumulative Triangle</title>
+<script type="text/javascript">
+    function cumulativeTriangle(n) {
+        console.log(n)
+        var first = (n*(n-1))/2 + 1;
+        var last = first + (n-1);
+        var sum = 0;
+        for(var i=first;i<=last;i++){
+            sum +=i;
+        }
+        return sum;
+    }
+    // 验证
+    console.log(cumulativeTriangle(2));// 5
+    console.log(cumulativeTriangle(3));//15
+</script>
+</head>
+<body>
+</body>	
+</html>
