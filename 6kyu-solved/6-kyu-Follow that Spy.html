@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Follow that Spy</title>
+<script type="text/javascript">
+    function findRoutes(routes) {
+        console.log(routes);
+        var arr=routes[0];
+        for(var i=0;i<routes.length;i++){
+            for(var j=1;j<routes.length;j++){
+                if(routes[j][0] == arr[arr.length-1]){
+                    arr.push(routes[j][1])
+                }else if(routes[j][1] == arr[0]){
+                    arr.unshift(routes[j][0]);
+                }
+            }
+        }
+        return arr.join(', ');
+    }
+
+    // 验证
+    console.log(findRoutes([["MNL", "TAG"], ["CEB", "TAC"], ["TAG", "CEB"], ["TAC", "BOR"]]));//"MNL, TAG, CEB, TAC, BOR"
+    console.log(findRoutes([["USA", "BRA"], ["JPN", "PHL"], ["BRA", "UAE"], ["UAE", "JPN"]]));//"USA, BRA, UAE, JPN, PHL"
+</script>
+</head>
+<body>
+</body>	
+</html>
