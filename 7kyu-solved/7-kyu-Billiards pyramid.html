@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Billiards pyramid</title>
+<script type="text/javascript">
+    function pyramid(balls) {
+        // console.log(balls);
+        var deta = 1 + 8*balls;
+        var result = (-1+Math.sqrt(deta,2))/2;
+        return Math.floor(result);
+    }
+
+    // 验证
+    console.log(pyramid(21));//6
+    console.log(pyramid(10));//4
+</script>
+</head>
+<body>
+</body>	
+</html>
