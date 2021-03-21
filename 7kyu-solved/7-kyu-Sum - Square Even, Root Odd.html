@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Sum - Square Even, Root Odd</title>
+<script type="text/javascript">
+    const sumSquareEvenRootOdd = ns => {
+        console.log(ns)
+        var temp = [];
+        for(var i=0;i<ns.length;i++){
+            if(ns[i] % 2 == 0)temp.push(Math.pow(ns[i],2));
+            else if(ns[i] % 2 !=0) temp.push(Math.sqrt(ns[i]));
+        }
+        return  parseFloat(sum(temp).toFixed(2));
+    };
+    
+    function sum(arr) {
+        return eval(arr.join("+"));
+    };
+    // 验证
+    console.log(sumSquareEvenRootOdd([4,5,7,8,1,2,3,0]));//91.61
+    console.log(sumSquareEvenRootOdd([1,14,9,8,17,21]));//272.71
+</script>
+</head>
+<body>
+</body>	
+</html>
