@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Will there be enough space?</title>
+<script type="text/javascript">
+    function enough(cap, on, wait) {
+        console.log(cap,on,wait)
+        if(on + wait > cap)return Math.abs(cap - (on+wait));
+        else return 0;
+    }
+    // 验证
+    console.log(enough(10, 5, 5));// 0
+    console.log(enough(100, 60, 50));// 10
+    console.log(enough(20, 5, 5));// 0
+</script>
+</head>
+<body>
+</body>	
+</html>
