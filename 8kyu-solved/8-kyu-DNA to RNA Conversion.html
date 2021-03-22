@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>DNA to RNA Conversion</title>
+<script type="text/javascript">
+	function DNAtoRNA(dna) {
+		// console.log(dna)
+		return dna.replace(/[T]/g,'U')
+	}
+    // 验证
+    console.log(DNAtoRNA("TTTT"));// "UUUU"
+	console.log(DNAtoRNA("GCAT"));//"GCAU"
+	console.log(DNAtoRNA("GACCGCCGCC"));//"GACCGCCGCC"
+</script>
+</head>
+<body>
+</body>	
+</html>
