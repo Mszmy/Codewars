@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Sort and Star</title>
+<script type="text/javascript">
+	function twoSort(s) {
+		console.log(s);
+		var arr = s.sort()[0].split('');
+		var result = [];
+		for(var k of arr){
+			result.push(k);
+			result.push('***')
+		}
+		result.pop();
+		return result.join('');
+	}
+    // 验证
+    console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));// 'b***i***t***c***o***i***n'
+    console.log(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]));// 'a***r***e'
+</script>
+</head>
+<body>
+</body>	
+</html>
