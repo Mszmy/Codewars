@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Counting sheep</title>
+<script type="text/javascript">
+	function countSheeps(arrayOfSheep) {
+		console.log(arrayOfSheep)
+		var str = arrayOfSheep.join('');
+		var arr = str.match(/true/gi);
+		console.log(arr==null)
+		return arr!=null?arr.length:0;
+	}
+
+    // 验证
+    array1 = [true,  true,  true,  false,
+              true,  true,  true,  true ,
+              true,  false, true,  false,
+              true,  false, false, true ,
+              true,  true,  true,  true ,
+              false, false, true,  true ];
+   	array2 = [null,null,null,null,null,null,null]
+
+  
+    console.log(countSheeps(array1));//17
+    console.log(countSheeps(array2));//0
+</script>
+</head>
+<body>
+</body>	
+</html>
