@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Pete, the baker</title>
+<script type="text/javascript">
+	function cakes(recipe, available) {
+		// console.log(recipe,available)
+		var arr = [];
+		for(var i in recipe){
+			// console.log(i)
+			// console.log(i in available)
+			if(i in available){
+				arr.push(Math.floor(available[i]/recipe[i]))
+			}
+			else return 0
+		}
+		return Math.min(...arr)
+	}
+
+    // 验证
+    recipe = {flour: 500, sugar: 200, eggs: 1};
+    available = {flour: 1200, sugar: 1200, eggs: 5, milk: 200};
+    console.log(cakes(recipe, available));//2
+
+    recipe = {apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100};
+    available = {sugar: 500, flour: 2000, milk: 2000};
+    console.log(cakes(recipe, available));// 0
+</script>
+</head>
+<body>
+</body>	
+</html>
