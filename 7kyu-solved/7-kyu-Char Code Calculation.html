@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Char Code Calculation</title>
+<script type="text/javascript">
+	function calc(x){
+		// console.log(x)
+		var arr = x.split('');
+		var temp = [];
+		for(var i = 0;i<arr.length;i++){
+			temp.push(arr[i].charCodeAt())
+		}
+		var str = temp.join('');
+		var str1 = JSON.parse(JSON.stringify(str));
+		str = str.replace(/[7]/g,1);
+		// console.log(str1,str)
+		var a = str.split('').reduce((total,cur)=>parseInt(total)+parseInt(cur),0);
+		var b = str1.split('').reduce((total,cur)=>parseInt(total)+parseInt(cur),0);
+		return b-a;
+	}
+
+	
+
+    // 验证
+  	console.log(calc('ABC'));//6
+	console.log(calc('abcdef'));// 6
+	console.log(calc('ifkhchlhfd'));// 6
+	console.log(calc('aaaaaddddr'));//30
+	console.log(calc('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'));// 96
+</script>
+</head>
+<body>
+</body>	
+</html>
