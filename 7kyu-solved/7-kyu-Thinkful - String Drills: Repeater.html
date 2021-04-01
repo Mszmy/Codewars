@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Thinkful - String Drills: Repeater</title>
+<script type="text/javascript">
+	function repeater(string, n){
+		var str = string;
+		for(var i=0;i<n-1;i++){
+			str = str + string;
+		}
+		return str;
+	}
+
+    // 验证
+  	console.log(repeater('a', 5));//'aaaaa'
+	console.log(repeater('Na', 16));//'NaNaNaNaNaNaNaNaNaNaNaNaNaNaNaNa'
+	console.log(repeater('Wub ', 6));//'Wub Wub Wub Wub Wub Wub '
+</script>
+</head>
+<body>
+</body>	
+</html>
