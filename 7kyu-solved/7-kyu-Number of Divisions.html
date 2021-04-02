@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Number of Divisions</title>
+<script type="text/javascript">
+	const divisions = (n, divisor) => {
+		var count = 0;
+		var d = n;
+		while(Math.floor(d/divisor)!=0){
+			count ++;
+			d = d/divisor;
+		}
+		// console.log(count)
+		return count;
+	};
+
+
+    // 验证
+  	console.log(divisions(6, 2));//2
+	console.log(divisions(100, 2));// 6
+	console.log(divisions(9999, 3));// 8
+	console.log(divisions(2, 3));//0
+	console.log(divisions(5, 5));// 1
+</script>
+</head>
+<body>
+</body>	
+</html>
