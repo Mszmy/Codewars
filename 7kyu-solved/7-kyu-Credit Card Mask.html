@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Credit Card Mask</title>
+<script type="text/javascript">
+	function maskify(cc) {
+		console.log(cc)
+		if(cc.length<=4)return cc;
+		var temp = [];
+		for(var i=0;i<cc.length-4;i++)temp.push('#');
+		return (cc.replace(cc.substr(0,cc.length-4),temp.join('')))
+	}
+
+    // 验证
+  	console.log(maskify("4556364607935616"));//"############5616"
+	console.log(maskify("64607935616"));// "#######5616"
+	console.log(maskify("1"));//"1"
+</script>
+</head>
+<body>
+</body>	
+</html>
