@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Max sum between two negatives</title>
+<script type="text/javascript">
+	function maxSumBetweenTwoNegatives(arr) {
+		console.log(arr)
+		let [highest, sum, negatives] = [0, 0, 0];
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] < 0) {
+		  		if (sum > highest) highest = sum;
+		  		negatives++;
+		  		sum = 0;
+			}else if (negatives > 0) {
+		  		sum += arr[i];
+			}
+		}
+		return negatives > 1 ? highest : -1;
+
+	}
+
+    // 验证
+  	console.log(maxSumBetweenTwoNegatives([-1,6,-2,3,5,-7]));//8
+	// console.log(maxSumBetweenTwoNegatives([5,-1,-2]));// 0 
+	// console.log(maxSumBetweenTwoNegatives([1,-2]));//-1 
+</script>
+</head>
+<body>
+</body>	
+</html>
