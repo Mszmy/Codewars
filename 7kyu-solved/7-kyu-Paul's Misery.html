@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Paul's Misery</title>
+<script type="text/javascript">
+	function paul(x){
+		// console.log(x)
+		var map = {'kata':5,'Petes kata':10,'life':0,'eating':1};
+		var sum = 0;
+		for(var i=0;i<x.length;i++){
+			sum += map[x[i]]
+		}
+		// console.log(sum)
+		if(sum<40)return 'Super happy!'
+		else if(sum>=40 && sum<70) return 'Happy!'
+		else if(sum >=70 && sum<100) return 'Sad!'
+		else return 'Miserable!'
+	}
+	// 验证
+	console.log(paul(['life', 'eating', 'life']));// 'Super happy!'
+	console.log(paul(['life', 'Petes kata', 'Petes kata', 'Petes kata', 'eating']));// 'Super happy!'
+	console.log(paul(['Petes kata', 'Petes kata', 'eating', 'Petes kata', 'Petes kata', 'eating']));// 'Happy!'
+</script>
+</head>
+<body>
+</body>	
+</html>
