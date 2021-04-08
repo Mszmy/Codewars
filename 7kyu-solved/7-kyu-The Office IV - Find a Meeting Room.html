@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>The Office IV - Find a Meeting Room</title>
+<script type="text/javascript">
+	function meeting(x){
+		// console.log(x)
+		var index = x.join('').search(/[O]/g)
+		if(index == -1) return 'None available!'
+		return index
+	}
+	// 验证
+	console.log(meeting(['X', 'O', 'X']));// 1
+	console.log(meeting(['O','X','X','X','X']));// 0
+	console.log(meeting(['X','X','X','X','X']));// 'None available!'
+</script>
+</head>
+<body>
+</body>	
+</html>
