@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Cat and Mouse - Easy Version</title>
+<script type="text/javascript">
+	function catMouse(x){
+		console.log(x)
+		var str = x.slice(1,x.length-1);
+		if(str.length >3) return "Escaped!"
+		else if(str.length <=3) return "Caught!"
+
+		// return x.length <= 5 ? 'Caught!' : 'Escaped!';
+	}
+	// 验证
+	console.log(catMouse('C....m'));// "Escaped!"
+	console.log(catMouse('C..m'));// "Caught!"
+	console.log(catMouse('C.....m'));//"Escaped!"
+</script>
+</head>
+<body>
+</body>	
+</html>
