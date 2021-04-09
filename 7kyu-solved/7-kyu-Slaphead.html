@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Slaphead</title>
+<script type="text/javascript">
+	function bald(x){
+		console.log(x)	
+		var len = x.length;
+		var s = x.match(/[/]/g);
+		var temp = [];
+		if(s == null) return [x,'Clean!']
+		var num = s.length;
+		for(var i=0;i<len;i++){
+			temp.push('-');
+		}
+		var str = temp.join('');
+		var result = [str];
+		if(num == 0)result.push('Clean!');
+		else if(num == 1)result.push('Unicorn!')
+		else if (num == 2)result.push('Homer!')
+		else if (num>=3&& num<=5)result.push('Careless!')
+		else result.push('Hobo!')		
+		return result;
+	}
+	// 验证
+	// console.log(bald('/---------'));// ['----------', 'Unicorn!']
+	// console.log(bald('/-----/-'));//['--------', 'Homer!']
+	// console.log(bald('--/--/---/-/---'));// ['---------------', 'Careless!']
+	console.log(bald('-----'));//['----','Clean!']
+</script>
+</head>
+<body>
+</body>	
+</html>
