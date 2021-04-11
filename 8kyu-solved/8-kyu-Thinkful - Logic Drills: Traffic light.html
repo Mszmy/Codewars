@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Thinkful - Logic Drills: Traffic light</title>
+<script type="text/javascript">
+	function updateLight(current) {
+		// console.log(current)
+		if(current == 'green') return 'yellow';
+		else if(current == 'yellow') return 'red';
+		else  return 'green';
+	}
+	// 验证
+	console.log(updateLight("green"));// "yellow"
+	console.log(updateLight("yellow"));// "red"
+	console.log(updateLight("red"));//"green"
+</script>
+</head>
+<body>
+</body>	
+</html>
