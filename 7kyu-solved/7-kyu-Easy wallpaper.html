@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Rainfall</title>
+<script type="text/javascript">
+	function wallpaper(l, w, h) {
+		console.log(l,w,h)
+		numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve","thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+		var roll = 5.2;
+	    var buffer = 1.15;;
+	    var need = (l*h)*2 + (w*h)*2;
+	    return numbers[Math.ceil(need/roll * buffer)];
+	}
+	// 验证
+	console.log(wallpaper(6.3, 4.5, 3.29));// "sixteen"
+	console.log(wallpaper(7.8, 2.9, 3.29));// "sixteen"
+</script>
+</head>
+<body>
+</body>	
+</html>
