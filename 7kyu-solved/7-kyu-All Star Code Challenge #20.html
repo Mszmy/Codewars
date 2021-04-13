@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>All Star Code Challenge #20</title>
+<script type="text/javascript">
+	function addArrays(array1, array2) {
+		console.log(array1,array2)
+		if(array1.length != array2.length) throw new Error();
+		var result = [];
+		for(var i=0;i<array1.length;i++){
+			result.push(array1[i] + array2[i])
+		}
+		return result
+	}
+	
+	// 验证
+	console.log(addArrays([1,2],[4,5]));//[5,7]
+  	console.log(addArrays([1,2,3],[4,5]));//'error'
+	console.log(addArrays(["a"],["b"]));//["ab"]
+</script>
+</head>
+<body>
+</body>	
+</html>
