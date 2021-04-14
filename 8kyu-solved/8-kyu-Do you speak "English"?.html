@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Do you speak "English"?</title>
+<script type="text/javascript">
+	function spEng(sentence){
+		console.log(sentence)
+		return (/english/i).test(sentence)
+	}
+	
+	// 验证
+	console.log(spEng("english"));//true
+	console.log(spEng("egnlish"));//false
+</script>
+</head>
+<body>
+</body>	
+</html>
