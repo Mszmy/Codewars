@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Drink about</title>
+<script type="text/javascript">
+	function peopleWithAgeDrink(old) {
+		console.log(old)
+		if(old<14)return 'drink toddy';
+		else if(old<18 && old>=14) return "drink coke";
+		else if(old<21 && old>=18) return "drink beer";
+		else return "drink whisky";
+	}
+	
+	// 验证
+	console.log(peopleWithAgeDrink(22));//'drink whisky'
+</script>
+</head>
+<body>
+</body>	
+</html>
