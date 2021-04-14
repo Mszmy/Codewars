@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Filter Long Words</title>
+<script type="text/javascript">
+	function filterLongWords(sentence, n) {
+		console.log(sentence,n)
+		var arr = sentence.split(' ');
+		var result = [];
+		for(var i=0;i<arr.length;i++){
+			if(arr[i].length >n){
+				result.push(arr[i]);
+			}
+		}
+		return result
+	}
+	
+	// 验证
+	console.log(filterLongWords("The quick brown fox jumps over the lazy dog", 4));// ['quick', 'brown', 'jumps']
+	console.log(filterLongWords('b8c7j t586ghb 59vf 38o7 68rl zdyh9rop n1pexb 3ha f964x2sqh 9lsc23ci 6jwg yqze lr pcr' , 6));
+</script>
+</head>
+<body>
+</body>	
+</html>
