@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Holiday VIII - Duty Free</title>
+<script type="text/javascript">
+	function dutyFree(normPrice, discount, hol){
+		console.log(normPrice,discount,hol)
+		return Math.floor(hol / (normPrice * (discount/100)))
+	}
+	
+	// 验证
+	console.log(dutyFree(12, 50, 1000));// 166
+	console.log(dutyFree(17, 10, 500));// 294
+	console.log(dutyFree(24, 35, 3000));// 357
+</script>
+</head>
+<body>
+</body>	
+</html>
