@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Substituting Variables Into Strings: Padded Numbers</title>
+<script type="text/javascript">
+	function solution(value){
+		console.log(value)
+		if(value == 0)return "Value is 00000";
+		var len = 5 - (value.toString().split('').length);
+		var arr = [];
+		for(var i=0;i<len;i++){
+			arr.push(0)
+		}
+		arr.push(value)
+		return 'Value is ' + arr.join('');
+		// ---------------------------------------
+		return "Value is " + ("00000" + value).slice(-5);
+
+	}
+	
+	// 验证
+	console.log(solution(5));//"Value is 00005"
+	console.log(solution(1204));//"Value is 01204"
+	console.log(solution(0));//"Value is 00000"
+</script>
+</head>
+<body>
+</body>	
+</html>
