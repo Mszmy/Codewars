@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Abbreviate a Two Word Name</title>
+<script type="text/javascript">
+	function abbrevName(name){
+		// console.log(name)
+		var arr = name.split(' ');
+		return arr[0].substring(0,1).toUpperCase() + '.' + arr[1].substring(0,1).toUpperCase() ;
+	}
+
+	
+	// 验证
+	console.log(abbrevName(Sam Harris`));//=> `S.H
+	console.log(abbrevName(Patrick Feeney`));//`P.F
+</script>
+</head>
+<body>
+</body>	
+</html>
