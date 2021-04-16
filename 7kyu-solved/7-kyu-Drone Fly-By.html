@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Drone Fly-By</title>
+<script type="text/javascript">
+	function flyBy(lamps, drone){
+		// console.log(lamps,drone)
+		var len = drone.length;
+		var str = lamps.substring(0,len).replace(/x/g,'o');;
+		return str + lamps.substring(len,);
+	}
+
+	
+	// 验证
+	console.log(flyBy('xxxxxx', '====T'));//'ooooox'
+</script>
+</head>
+<body>
+</body>	
+</html>
