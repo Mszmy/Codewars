@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Harvest Festival</title>
+<script type="text/javascript">
+	function plant(seed, water, fert, temp){
+		console.log(seed,water,fert,temp)
+		var temp1=[];
+		var temp2=[];
+		for(var i=0;i<water;i++)temp1.push('-');
+		for(var j=0;j<fert;j++)temp2.push(seed);
+		var str = temp1.join('') + temp2.join('');
+		var result = [];
+		if(temp<20 || temp>30){
+			for(var i=0;i<water;i++){
+				result.push(temp1.join(''));
+			}
+			return result.join('') + seed;
+		}
+		for(var i=0;i<water;i++){
+			result.push(str);
+		}
+		return result.join('')
+		// return	
+	}
+
+	// 验证
+	console.log(plant(",", 3, 7, 25));// "---,,,,,,,---,,,,,,,---,,,,,,,"
+	console.log(plant("+", 1, 3, 15));// "-+"
+	console.log(plant(";", 9, 10, 30));// "---------;;;;;;;;;;---------;;;;;;;;;;---------;;;;;;;;;;---------;;;;;;;;;;---------;;;;;;;;;;---------;;;;;;;;;;---------;;;;;;;;;;---------;;;;;;;;;;---------;;;;;;;;;;"
+	console.log(plant("^", 3, 3, 35));// "---------^"
+</script>
+</head>
+<body>
+</body>	
+</html>
