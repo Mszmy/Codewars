@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Word to binary</title>
+<script type="text/javascript">
+	function wordToBin(str){
+		console.log(str)
+		// 先得到对应的ascii码，然后再将十进制转换成二进制
+		var arr = str.split('');
+		var result = [];
+		for(var i=0;i<arr.length;i++){
+			// console.log(arr[i].charCodeAt().toString(2))
+			result.push('0'+arr[i].charCodeAt().toString(2))
+		}
+		return result
+	}
+
+	// 验证
+	console.log(wordToBin('man'));//[ '01101101', '01100001', '01101110' ]
+	console.log(wordToBin('AB'));// ['01000001', '01000010']
+	console.log(wordToBin('wecking'));//[ '01110111', '01100101', '01100011', '01101011', '01101001', '01101110', '01100111' ]
+</script>
+</head>
+<body>
+</body>	
+</html>
