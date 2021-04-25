@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Most profit from stock quotes</title>
+<script type="text/javascript">
+	function getMostProfitFromStockQuotes(quotes) {
+		console.log(quotes)
+		var p = 0
+		var max = quotes[quotes.length-1]
+		for(let i =  quotes.length - 2; i >= 0; i--)
+		{
+			max = Math.max(max,quotes[i])
+			// console.log(max)
+			// console.log('---',quotes[i])
+			if(quotes[i] < max)
+			p+= max-quotes[i]
+		}
+		return p
+	}
+
+	// 验证
+	console.log(getMostProfitFromStockQuotes([ 1, 2, 3, 4, 5, 6 ]));//15
+    console.log(getMostProfitFromStockQuotes([ 6, 5, 4, 3, 2, 1 ]));//0
+    console.log(getMostProfitFromStockQuotes([ 1, 6, 5, 10, 8, 7 ]));//18
+</script>
+</head>
+<body>
+</body>	
+</html>
+
+
+
