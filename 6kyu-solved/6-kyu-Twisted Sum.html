@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Twisted Sum</title>
+<script type="text/javascript">
+	function twistedSum(n) {
+		// console.log(n)
+		var sum = 0;
+		for(var i=1;i<=n;i++){
+			if(i>9){
+				sum += parseInt(otherSum(i))
+			}else{
+				sum += i;
+			}
+		}
+		return sum;
+	}
+	function otherSum(n){
+		return  eval(n.toString().split('').join("+"))
+	}
+  // 验证
+	console.log(twistedSum(3));// 6
+	console.log(twistedSum(10));//46
+	console.log(twistedSum(11));//48
+	console.log(twistedSum(12));//51
+</script>
+</head>
+<body>
+</body>	
+</html>
+
+
+
