@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Backspaces in string</title>
+<script type="text/javascript">
+	function cleanString(s) {
+		console.log(s)
+		var arr = s.split('');
+		var result = [];
+		for(var i=0;i<arr.length;i++){
+			if(arr[i] == '#'){
+				result.pop()
+			}else{
+				result.push(arr[i]);
+			}
+		}
+		return result.join('');
+	}
+
+	// 验证
+	console.log(cleanString('abc#d##c'));//"ac"
+	console.log(cleanString('abc####d##c#'));//"" 
+</script>
+</head>
+<body>
+</body>	
+</html>
+
+
+
